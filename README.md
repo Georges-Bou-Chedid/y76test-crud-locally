@@ -44,6 +44,12 @@ on failure the page should be redirected to create page with failure message.
 - Declare the credentials downloaded in .env file
 - Use app('firebase.firestore') in laravel to connect to firestore database and create a new collection 
 
+## Offline Persistence
+
+I create a javascript file to make our firestore cloud persistence enabled
+as when we are offline we should be able to continue storing data and editing and fetching from cache until we are back online
+then all events happened before will be synced when we are online
+
 ## Notification
 
 Use the notification facade of laravel to send an email
