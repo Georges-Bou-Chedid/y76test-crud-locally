@@ -21,46 +21,32 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+After installing composer and creating new laravel 9.0 project called y76test
+i configured valet-linux cpriego to run my project through it without calling php artisan serve
+linking the directory to valet and calling directory-name.test in the browser.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Design
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Opening our project should welcome Mr. Ibrahim with a button to let him store new products.
+pressing the button should let you choose the product category and product type which are required before submitting
+on success the page should be redirected to welcome page with success message
+on failure the page should be redirected to create page with failure message.
 
-## Laravel Sponsors
+## Firestore Database
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Implementing firestore to laravel through "composer require kreait/laravel-firebase"
+- Adding the firestore.php to the config file
+- Installing php grpc
+- Installing google cloud firestore using "composer require google/cloud-firestore"
+- Create new project in firebase console and download the credentials of your service account and move it to the app
+- Declare the credentials downloaded in .env file
+- Use app('firebase.firestore') in laravel to connect to firestore database and create a new collection 
 
-### Premium Partners
+## Notification
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Use the notification facade of laravel to send an email
+Suppose we have the software email provided so we can notify him that the synchronization is complete
+In testing mode i connected laravel to mailtrap so we can see the mail that is being send
+signing in to mailtrap should be through my github account.
